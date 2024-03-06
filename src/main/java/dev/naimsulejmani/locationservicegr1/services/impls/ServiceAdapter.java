@@ -1,5 +1,6 @@
 package dev.naimsulejmani.locationservicegr1.services.impls;
 
+import dev.naimsulejmani.locationservicegr1.services.HasId;
 import dev.naimsulejmani.locationservicegr1.services.Serviceable;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -7,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 import java.util.Optional;
 
-public class ServiceAdapter<T, Tid> implements Serviceable<T, Tid> {
+public class ServiceAdapter<T , Tid> implements Serviceable<T, Tid> {
     private final JpaRepository<T, Tid> repository;
 
     public ServiceAdapter(JpaRepository<T, Tid> repository) {
@@ -16,6 +17,9 @@ public class ServiceAdapter<T, Tid> implements Serviceable<T, Tid> {
 
     @Override
     public T add(T item) {
+//        var itemFound = findById(item.getId());
+//        if (itemFound != null)
+//            throw new RuntimeException("Entity Already exists!");
         return repository.save(item);
     }
 
