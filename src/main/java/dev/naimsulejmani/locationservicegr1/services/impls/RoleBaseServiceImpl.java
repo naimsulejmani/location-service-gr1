@@ -6,8 +6,8 @@ import dev.naimsulejmani.locationservicegr1.services.RoleService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RoleServiceImpl extends ServiceAdapter<Role, Integer> implements RoleService {
-    public RoleServiceImpl(RoleRepository repository) {
+public class RoleBaseServiceImpl extends BaseServiceImpl<Role, Integer> implements RoleService {
+    public RoleBaseServiceImpl(RoleRepository repository) {
         super(repository);
     }
 }

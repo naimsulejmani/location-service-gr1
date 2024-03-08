@@ -1,17 +1,16 @@
 package dev.naimsulejmani.locationservicegr1.services.impls;
 
-import dev.naimsulejmani.locationservicegr1.services.HasId;
-import dev.naimsulejmani.locationservicegr1.services.Serviceable;
+import dev.naimsulejmani.locationservicegr1.services.BaseService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-public class ServiceAdapter<T , Tid> implements Serviceable<T, Tid> {
+public abstract class BaseServiceImpl<T , Tid> implements BaseService<T, Tid> {
     private final JpaRepository<T, Tid> repository;
 
-    public ServiceAdapter(JpaRepository<T, Tid> repository) {
+    public BaseServiceImpl(JpaRepository<T, Tid> repository) {
         this.repository = repository;
     }
 

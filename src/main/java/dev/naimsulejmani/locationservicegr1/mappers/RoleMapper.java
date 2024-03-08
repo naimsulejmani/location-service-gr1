@@ -9,4 +9,6 @@ import org.mapstruct.factory.Mappers;
 @Mapper(componentModel = "spring")
 public interface RoleMapper extends Convertable<Role, RoleDto> {
     RoleMapper MAPPER = Mappers.getMapper(RoleMapper.class);
+
+
 }
