@@ -1,7 +1,7 @@
-package dev.naimsulejmani.locationservicegr1.controllers;
+package dev.naimsulejmani.locationservicegr1.infrastructure.controllers;
 
 import dev.naimsulejmani.locationservicegr1.mappers.Convertable;
-import dev.naimsulejmani.locationservicegr1.services.BaseService;
+import dev.naimsulejmani.locationservicegr1.infrastructure.services.BaseService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

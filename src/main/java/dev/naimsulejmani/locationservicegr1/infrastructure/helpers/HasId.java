@@ -1,4 +1,4 @@
-package dev.naimsulejmani.locationservicegr1.services;
+package dev.naimsulejmani.locationservicegr1.infrastructure.helpers;
 
 @FunctionalInterface
 public interface HasId<Tid> {

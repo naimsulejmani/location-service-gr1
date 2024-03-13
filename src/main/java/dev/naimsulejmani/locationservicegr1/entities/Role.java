@@ -1,6 +1,5 @@
 package dev.naimsulejmani.locationservicegr1.entities;
 
-import dev.naimsulejmani.locationservicegr1.services.HasId;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

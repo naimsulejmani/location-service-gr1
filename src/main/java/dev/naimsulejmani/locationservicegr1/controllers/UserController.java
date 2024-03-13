@@ -3,16 +3,10 @@ package dev.naimsulejmani.locationservicegr1.controllers;
 
 import dev.naimsulejmani.locationservicegr1.dtos.UserDto;
 import dev.naimsulejmani.locationservicegr1.entities.User;
-import dev.naimsulejmani.locationservicegr1.mappers.Convertable;
+import dev.naimsulejmani.locationservicegr1.infrastructure.controllers.BaseController;
 import dev.naimsulejmani.locationservicegr1.mappers.UserMapper;
-import dev.naimsulejmani.locationservicegr1.services.BaseService;
 import dev.naimsulejmani.locationservicegr1.services.UserService;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.net.URI;
-import java.util.List;
 
 @RestController
 @RequestMapping("api/users")

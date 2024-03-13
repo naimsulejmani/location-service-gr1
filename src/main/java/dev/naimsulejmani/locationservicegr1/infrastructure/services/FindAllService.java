@@ -1,4 +1,4 @@
-package dev.naimsulejmani.locationservicegr1.services;
+package dev.naimsulejmani.locationservicegr1.infrastructure.services;
 
 import java.util.List;
 

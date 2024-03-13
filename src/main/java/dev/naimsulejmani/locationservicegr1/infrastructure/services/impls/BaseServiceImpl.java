@@ -1,6 +1,7 @@
-package dev.naimsulejmani.locationservicegr1.services.impls;
+package dev.naimsulejmani.locationservicegr1.infrastructure.services.impls;
 
-import dev.naimsulejmani.locationservicegr1.services.BaseService;
+import dev.naimsulejmani.locationservicegr1.infrastructure.exceptions.NotFoundException;
+import dev.naimsulejmani.locationservicegr1.infrastructure.services.BaseService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -38,7 +39,7 @@ public abstract class BaseServiceImpl<T , Tid> implements BaseService<T, Tid> {
     public T findById(Tid id) {
         Optional<T> item = repository.findById(id);
         if (item.isEmpty()) {
-            throw new EntityNotFoundException("Entity not found");
+            throw new NotFoundException("Entity not found");
         }
         return item.get();
     }
