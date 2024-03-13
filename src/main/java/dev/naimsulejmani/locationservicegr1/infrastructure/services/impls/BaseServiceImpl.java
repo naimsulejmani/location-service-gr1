@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 public abstract class BaseServiceImpl<T extends HasId<Tid>, Tid> implements BaseService<T, Tid> {
-    private final JpaRepository<T, Tid> repository;
+    protected final JpaRepository<T, Tid> repository;
 
     public BaseServiceImpl(JpaRepository<T, Tid> repository) {
         this.repository = repository;
