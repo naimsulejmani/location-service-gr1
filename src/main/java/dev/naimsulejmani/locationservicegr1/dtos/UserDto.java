@@ -1,12 +1,13 @@
 package dev.naimsulejmani.locationservicegr1.dtos;
 
+import dev.naimsulejmani.locationservicegr1.infrastructure.helpers.HasId;
 import lombok.Data;
 
 import java.time.LocalDate;
 
 @Data
-public class UserDto {
-    private long id;
+public class UserDto implements HasId<Long> {
+    private Long id;
     private String username;
     private String password;
     private String email;

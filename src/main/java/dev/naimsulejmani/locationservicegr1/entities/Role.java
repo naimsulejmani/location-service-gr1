@@ -1,5 +1,6 @@
 package dev.naimsulejmani.locationservicegr1.entities;
 
+import dev.naimsulejmani.locationservicegr1.infrastructure.helpers.HasId;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,10 +15,10 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Role {
+public class Role implements HasId<Integer> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     @Column(unique = true)
     private String name;
     private String description;
