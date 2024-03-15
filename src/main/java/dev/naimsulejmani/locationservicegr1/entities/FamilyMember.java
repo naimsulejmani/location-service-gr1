@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "family_members")
@@ -29,6 +30,9 @@ public class FamilyMember implements HasId<Long> {
     private LocalDateTime validTo;
     private Boolean approved;
     private LocalDateTime approvedDate;
+
+    @OneToMany(mappedBy = "familyMember", fetch = FetchType.LAZY)
+    private List<Location> locations;
 }
 
 

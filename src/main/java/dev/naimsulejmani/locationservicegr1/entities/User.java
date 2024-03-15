@@ -43,6 +43,10 @@ public class User implements HasId<Long> {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<FamilyMember> familyMembers;
 
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    private List<Location> locations;
+
 }
 
 
