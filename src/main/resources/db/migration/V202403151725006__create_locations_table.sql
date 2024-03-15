@@ -7,5 +7,5 @@ CREATE TABLE locations
     longitude      DOUBLE PRECISION            NOT NULL,
     report_date     TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT FK_locations_users_user_id FOREIGN KEY (user_id) REFERENCES users(id),
-    CONSTRAINT FK_locations_families_family_member_id FOREIGN KEY (family_member_id) REFERENCES family_members(id),
+    CONSTRAINT FK_locations_families_family_member_id FOREIGN KEY (family_member_id) REFERENCES family_members(id)
 );
