@@ -8,5 +8,8 @@ public interface DbDao {
             String procedureName,
             Map<String, Object> inParams,
             Map<String, Object> outParams,
-            Class className);
+            Class<T> className);
+
+
+    <T> List<T> getResultFromQuery(String query, Map<String, Object> inParams, Class<T> className);
 }
