@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class NotFoundController {
 
-    @RequestMapping(value = "/**")
-    public ResponseEntity<String> notFound() {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("NOT FOUND");
-    }
+//    @RequestMapping(value = "/**")
+//    public ResponseEntity<String> notFound() {
+//        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("NOT FOUND");
+//    }
 }
